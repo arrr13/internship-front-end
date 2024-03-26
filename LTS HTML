@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Startup Landing Page</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .section {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .section:nth-child(even) {
+        background-color: #f2f2f2;
+    }
+
+    .hero {
+        background-image: url("https://i.ibb.co/28dHJLn/background.jpg");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        padding: 50px;
+        font-family: 'Poppins', sans-serif;
+        animation: fadeIn 1s forwards, scaleIn 1s forwards;
+       /* border-radius: 50px;*/
+        border:50px;
+    }
+
+    .container {
+        max-width: 800px;
+        text-align: center;
+        padding:30px;
+    }
+
+    .logo {
+        width: auto;
+        height: auto;
+        
+        box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.8); /* Blur effect */
+        animation: slideIn 1s forwards;
+    }
+
+    h1 {
+        margin: 10px 0;
+        font-size: 200px; /* Increased font size */
+        font-weight: bold; /* Bold font weight */
+        text-transform: uppercase; /* Convert to uppercase */
+        animation: fadeIn 1s forwards, scaleIn 1s forwards;
+    }
+
+    .team-member {
+        margin-top: 20px;
+        color: #fff;
+        animation: slideIn 1s forwards;
+    }
+
+    .team-member h3 {
+        margin: 5px 0;
+        font-size: 40px; /* Increased font size */
+        font-weight: bold; /* Bold font weight */
+        text-transform: uppercase; /* Convert to uppercase */
+    }
+
+    .team-member p {
+        margin: 5px 0;
+        font-size: 20px; /* Increased font size to 20px */
+        font-weight: bold; /* Bold font weight */
+    }
+
+    /* Features Section */
+    .features {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: white; /* Set background color to white */
+        background-image: url("https://i.ibb.co/L0nkspd/uploadback.jpg");
+        color:white;
+       
+
+    }
+
+    .features .container {
+        max-width: 800px; /* Adjusted max-width */
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .features .content {
+        flex: 1;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 40px; /* Increased font size */
+    }
+
+    .features .image {
+        flex: 1;
+        text-align: center;
+    }
+
+    .features .image img {
+        max-width: 400px; /* Increased width */
+        height: auto;
+    }
+
+    #box1 {
+        border: 5px solid rgba(255, 255, 255, 1); /* Faded box */
+        border-radius: 50px;
+        padding: 20px;
+    }
+
+    /* Buttons and Inputs */
+    input[type="file"],
+    input[type="submit"],
+    button {
+        height: 50px; /* Increased height */
+        width: 300px; /* Increased width */
+        font-size: 20px; /* Increased font size */
+        font-family: 'Poppins', sans-serif; /* Set font family */
+        border-radius: 25px; /* Rounded corners */
+        background-color: #633bba; /* Button color */
+        color: white; /* Text color */
+        cursor: pointer; /* Cursor style */
+        transition: all 0.3s ease; /* Transition effect */
+    }
+
+    /* Hover effect */
+    input[type="file"]:hover,
+    input[type="submit"]:hover,
+    button:hover {
+        background-color: #421f80; /* Darker button color on hover */
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+   
+</style>
+</head>
+<body>
+    <div id="hero" class="section hero">
+        <div class="container">
+            <img src="https://i.ibb.co/BLWNPL4/logo.png" alt="Company Logo" class="logo">
+            <h1>ENIGMA</h1>
+            <div class="team-member">
+                <h3>TEAM MEMBERS</h3>
+                <p>ARVIND - +1234567890</p>
+                <p>H R KRUTHIKA - +9876543210</p>
+                <p>G PRITHVI - +3456789012</p>
+                <p>RISHIKA SOLANKI - +5678901234</p>
+                <p>SYED ISMAIL R- +7890123456</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="features" class="section features">
+        <div class="container">
+            <div class="content">
+                <div class="content" style="text-align: center;">
+                    <h2 style="color: #5c33b7; font-size: 60px;">VIDEO TO TEXT</h2> <!-- Increased font size -->
+                    <p style="color: #5c33b7;">Convert your video to text and add subtitles to your videos online.</p><br>
+                    <div id="box1">
+                        <h3>
+                            Upload a video file
+                        </h3>
+                        <form method="post" enctype="multipart/form-data">
+                            <input type="file" name="file"> <!-- Removed inline style -->
+                            <input type="submit" value="Upload"> <!-- Removed inline style -->
+                        </form>
+                       <p style="font-size:20px"> Did you say: {{ transcription }}</p><br>
+                        <button onclick="window.open('{{ url_for('download', filename=file) }}', '_blank')">Download the video file</button> <!-- Converted text to button -->
+                      </div>
+                    </div>
+                </div>
+                <!--<div class="image" style="text-align: center;">
+                    <img src=""https://i.ibb.co/wWdXG4z/uploadimage.jpg" alt="Feature Image">
+                </div>-->
+            </div>
+        </div>
+    
+        <div id="contact" class="section contact">
+            <div style="color: #b870bd; font-size: 30px; margin-bottom: 20px;">
+                TO GET A BETTER OUTPUT, FOLLOW THE INSTRUCTIONS
+            </div>
+            <div class="container" style="text-align: left;">
+                <ul style="list-style-type: disc; font-size: 25px;">
+                    <li>Make sure the face of the user is always visible in the video.</li>
+                    <li>Try uploading files that are less than 30 seconds in duration.</li>
+                    <li>Make sure you are connected to a stable internet connection.</li>
+                    <li>Feel free to upload any video format.</li>
+                    <li>This is a beta version , so any wrong information shall not be a responsiblity* of Engima1729 team</li>
+                </ul>
+            </div>
+        </div>
+    
+        <!--<div id="pricing" class="section pricing">
+            <h2>Pricing</h2>
+            <p>Find the perfect plan for your needs.</p>
+        </div>-->
+    
+        <div class="scroll-down" onclick="scrollToNextSection()">↓</div>
+    
+        <script>
+            function scrollToNextSection() {
+                const sections = document.querySelectorAll('.section');
+                let nextSectionIndex = 0;
+                sections.forEach((section, index) => {
+                    const rect = section.getBoundingClientRect();
+                    if (rect.top >= 0 && rect.top < window.innerHeight) {
+                        nextSectionIndex = index + 1;
+                    }
+                });
+                if (nextSectionIndex < sections.length) {
+                    sections[nextSectionIndex].scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            function redirectTo(){
+    
+              let redirectURL = document.getElementById('url').value;
+              location.replace(redirectURL)            
+            }
+    
+        </script>
+    </body>
+    </html>
+    
